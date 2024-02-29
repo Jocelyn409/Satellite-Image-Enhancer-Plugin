@@ -1,8 +1,23 @@
+body {
+    height: 150px;
+    width: 250px;
+}
+
 #buttons {
-    width: 300px;
+}
+
+#imageButtons {
 }
 
 .primaryButtons {
-    width: 250px;
+    width: 80%;
+    height: 40px;
+    
+    float: right;
+}
+
+.radioButtons {
+    height: 45px;
+
     float: right;
 }
