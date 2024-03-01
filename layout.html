@@ -2,7 +2,6 @@
     <head>
         <title>Satellite Image Enhancer</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
     </head>
     <body>
         <div id="indicatorContainer">
@@ -14,28 +13,16 @@
                 <button id="downloadButton" class="primaryButtons">Download</button>
             </div>
             <div id="enhanceButtons">
-                <input type="radio" id="two">
-                <input type="radio" id="three">
-                <input type="radio" id="four">
-                <button onclick="setRadioButton()" class="radioButtons">x2</button>
-                <button class="radioButtons">x3</button>
-                <button class="radioButtons">x4</button>
-
-                <!--<button class="radioButtons">
-                    <label class="test" for="two">x2</label>
-                </button>
-                <input type="radio" name="box" id="two">
-
-                <button class="radioButtons">
-                    <label for="three">x3</label>
-                </button>
-                <input type="radio" name="box" id="three">
-
-                <button class="radioButtons">
-                    <label for="four">x4</label>
-                </button>
-                <input type="radio" name="box" id="four">-->
+                <input type="radio" name="enhanceLevel" id="radioTwo">
+                <button id="enhanceX2" class="radioButtons">x2</button>
+                
+                <input type="radio" name="enhanceLevel" id="radioThree">
+                <button id="enhanceX3" class="radioButtons">x3</button>
+                
+                <input type="radio" name="enhanceLevel" id="radioFour">
+                <button id="enhanceX4" class="radioButtons">x4</button>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
