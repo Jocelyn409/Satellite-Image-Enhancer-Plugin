@@ -1,23 +1,67 @@
 body {
     height: 150px;
     width: 250px;
+    
+    background-color: #141e24;
+
+    display: flex;
+}
+
+#indicatorContainer {
+    width: 15%;
+
+    padding-top: 2px;
+
+    justify-content: center;
+    display: flex;
+    
+    #indicator {
+        height: 35px;
+        width: 35px;
+        background-color: green;
+        border-radius: 50%;
+    }
 }
 
 #buttons {
-}
+    width: 85%;
 
-#imageButtons {
-}
+    #imageButtons {
+        margin-bottom: 5px;
 
-.primaryButtons {
-    width: 80%;
-    height: 40px;
-    
-    float: right;
-}
+        .primaryButtons {
+            width: 96%;
+            height: 45px;
+            margin-bottom: 6px;
 
-.radioButtons {
-    height: 45px;
+            color: wheat;
+            background-color: #141e24;
+            font-size: x-large;
+            border-width: 5px;
 
-    float: right;
+            float: right;
+        }
+
+        .primaryButtons#downloadButton {
+            background-color: rgb(102, 165, 9);
+        }
+    }
+
+    #enhanceButtons {
+        text-align-last: justify;
+        
+        .radioButtons {
+            height: 50px;
+            width: 50px;
+
+            color: wheat;
+            background-color: #141e24;
+
+            border-width: 5px;
+            border-radius: 50%;
+            font-size: x-large;
+
+            padding-left: 8px;
+        }
+    }
 }
