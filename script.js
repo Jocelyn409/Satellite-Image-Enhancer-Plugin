@@ -6,10 +6,21 @@ window.onload = function() {
     var radioThree = document.getElementById("radioThree");
     var radioFour = document.getElementById("radioFour");
 
+    chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+        let url = tabs[0].url;
+        console.log(url);
+        if(url.includes("google.com/maps/")) {
+            document.getElementById("indicator").style.backgroundColor = "green";
+        }
+        else {
+            document.getElementById("indicator").style.backgroundColor = "red";
+        }
+    });
+
     chrome.storage.sync.get(["radioSetting", "buttonSetting"]).then((result) => {
         console.log("Value is " + result.radioSetting + " and " + result.buttonSetting);
         if(!result.radioSetting || !result.buttonSetting) {
-            setRadioButton(radioThree, 3);
+            setRadioButton(radioTwo, 2);
         }
         else {
             setRadioButton(result.radioSetting, result.buttonSetting);
@@ -40,17 +51,17 @@ function setRadioButton(radioInput, buttonInput) {
     switch(buttonInput) {
         case 2: enhanceX2.style.border = "5px inset orange";
         chrome.storage.sync.set({ radioSetting: "radioTwo", buttonSetting: 2 }).then(() => {
-            console.log("Value is set");
+            console.log("Value is set to 2");
         });
         break;
         case 3: enhanceX3.style.border = "5px inset orange";
         chrome.storage.sync.set({ radioSetting: "radioThree", buttonSetting: 3 }).then(() => {
-            console.log("Value is set");
+            console.log("Value is set to 3");
         });
         break;
         case 4: enhanceX4.style.border = "5px inset orange";
         chrome.storage.sync.set({ radioSetting: "radioFour", buttonSetting: 4 }).then(() => {
-            console.log("Value is set");
+            console.log("Value is set to 4");
         });
         break;
     }

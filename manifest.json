@@ -6,6 +6,7 @@
         "default_popup": "layout.html"
     },
     "permissions": [
-        "storage"
+        "storage",
+        "tabs"
     ]
 }
