@@ -49,17 +49,17 @@ function setRadioButton(radioInput, buttonInput) {
     enhanceX4.style.border = "5px outset black";
     
     switch(buttonInput) {
-        case 2: enhanceX2.style.border = "5px inset orange";
+        case 2: enhanceX2.style.border = "5px inset yellow";
         chrome.storage.sync.set({ radioSetting: "radioTwo", buttonSetting: 2 }).then(() => {
             console.log("Value is set to 2");
         });
         break;
-        case 3: enhanceX3.style.border = "5px inset orange";
+        case 3: enhanceX3.style.border = "5px inset yellow";
         chrome.storage.sync.set({ radioSetting: "radioThree", buttonSetting: 3 }).then(() => {
             console.log("Value is set to 3");
         });
         break;
-        case 4: enhanceX4.style.border = "5px inset orange";
+        case 4: enhanceX4.style.border = "5px inset yellow";
         chrome.storage.sync.set({ radioSetting: "radioFour", buttonSetting: 4 }).then(() => {
             console.log("Value is set to 4");
         });
